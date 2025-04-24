@@ -5,7 +5,7 @@ var weatherSection = document.querySelector('.weatherSection .row');
 async function myFunction(country) {
     weatherSection.innerHTML = '<p class="text-white text-center">Loading...</p>';
 
-    var response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=ff456200a65f4c35bc5155657251704&q=${country}&days=3&aqi=no&alerts=no`);
+    var response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=ff456200a65f4c35bc5155657251704&q=${country}&days=3&aqi=no&alerts=no`);
     
     if (!response.ok) {
         weatherSection.innerHTML = ''; 
